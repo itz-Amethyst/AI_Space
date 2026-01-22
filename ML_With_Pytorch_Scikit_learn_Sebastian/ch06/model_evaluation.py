@@ -140,8 +140,6 @@ plt.show();
 pipe_svc = make_pipeline(StandardScaler(), SVC(random_state=1))
 param_range = [0.0001, 0.001, 0.01, 0.1, 10.0, 100.0, 1000.0]
 param_grid = [{'svc__C': param_range, 'svc__kernel': ['linear']}, {'svc__C': param_range, 'svc__gamma': param_range, 'svc__kernel': ['rbf']}]
-# NOTE: when you set the refit to true which by default is set to true, in fact there is no need to fit the best estimator model again on the data since it
-# has been done already bythe gridsearch, it's just extra computation if you do
 gs = GridSearchCV(estimator=pipe_svc, param_grid=param_grid, scoring='accuracy', cv=10, refit=True, n_jobs=-1)
 gs.fit(X_train, y_train)
 print(gs.best_score_)
