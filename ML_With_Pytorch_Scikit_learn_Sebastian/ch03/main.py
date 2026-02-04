@@ -6,6 +6,7 @@ from sklearn.svm import SVC
 from sklearn.linear_model import LogisticRegression
 from sklearn.tree import DecisionTreeClassifier
 from ML_With_Pytorch_Scikit_learn_Sebastian.ch03.logistic_np import LogisticRegressionGD
+from sklearn.
 from ML_With_Pytorch_Scikit_learn_Sebastian.ch02.plot_util import plot_decision_regions
 import matplotlib.pyplot as plt
 from sklearn.metrics import accuracy_score
